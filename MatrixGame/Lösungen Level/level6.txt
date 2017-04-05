@@ -1,0 +1,61 @@
+bahn1 = new Box(5, 1, 40);
+b1mat = new Matrix4f();
+b1mat.translate(0,68, 75);
+b1mat.rotateX(-10);
+bahn1.setModelmatrix(b1mat);
+
+bahn2 = new Box(5, 1, 30);
+b2mat = new Matrix4f();
+b2mat.translate(0,59, 40);
+b2mat.rotateX(-15);
+bahn2.setModelmatrix(b2mat);
+
+bahn3 = new Box(5, 1, 41);
+b3mat = new Matrix4f();
+b3mat.translate(6,20, -46);
+b3mat.rotateY(20);
+b3mat.rotateX(-10);
+bahn3.setModelmatrix(b3mat);
+
+bahn4 = new Box(5, 1, 41);
+b4mat = new Matrix4f();
+b4mat.translate(-6,20, -46);
+b4mat.rotateY(-20);
+b4mat.rotateX(-10);
+bahn4.setModelmatrix(b4mat);
+
+bahn5 = new Box(5, 1, 30);
+b5mat = new Matrix4f();
+b5mat.translate(0,16.5, -77);
+bahn5.setModelmatrix(b5mat);
+
+bahn6 = new Box(1, 5, 10);
+b6mat = new Matrix4f();
+b6mat.translate(4.2,19.5, -60);
+b6mat.rotateY(20);
+b6mat.rotateX(-10);
+bahn6.setModelmatrix(b6mat);
+
+bahn7 = new Box(1, 5, 10);
+b7mat = new Matrix4f();
+b7mat.translate(-4.2,19.5, -60);
+b7mat.rotateY(-20);
+b7mat.rotateX(-10);
+bahn7.setModelmatrix(b7mat);
+
+bahn8 = new Box(1, 5, 15);
+b8mat = new Matrix4f();
+b8mat.translate(2.6,18.5, -71.9);
+bahn8.setModelmatrix(b8mat);
+
+bahn9 = new Box(1, 5, 15);
+b9mat = new Matrix4f();
+b9mat.translate(-2.6,18.5, -71.9);
+bahn9.setModelmatrix(b9mat);
+
+bahn10 = new Box(5, 5, 1);
+b10mat = new Matrix4f();
+b10mat.translate(0,18.5, -91.5);
+bahn10.setModelmatrix(b10mat);
+
+ 

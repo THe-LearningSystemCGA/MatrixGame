@@ -1,0 +1,19 @@
+bahn1 = new Box(5, 1, 108);
+b1mat = new Matrix4f();
+b1mat.rotateY(-45);
+b1mat.translate(0,23.6,45.5);
+b1mat.rotateX(26);
+bahn1.setModelmatrix(b1mat);
+
+bahn2 = new Box(5, 1, 7.2);
+b2mat = new Matrix4f();
+b2mat.rotateY(-45);
+b2mat.translate(0,0,97.5);
+bahn2.setModelmatrix(b2mat);
+
+bahn3 = new Box(5, 1, 5);
+b3mat = new Matrix4f();
+b3mat.rotateY(-45);
+b3mat.translate(0,2,101);
+b3mat.rotateX(90);
+bahn3.setModelmatrix(b3mat);

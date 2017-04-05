@@ -1,0 +1,88 @@
+bahn1 = new Box(5, 1, 70);
+b1mat = new Matrix4f();
+b1mat.translate(30,50,-50);
+b1mat.rotateY(90);
+b1mat.rotateX(15);
+bahn1.setModelmatrix(b1mat);
+
+bahn2 = new Box(5, 1, 5);
+b2mat = new Matrix4f();
+b2mat.translate(66.2,41,-50);
+bahn2.setModelmatrix(b2mat);
+
+bahn3 = new Box(3.1, 0.5, 3);
+b3mat = new Matrix4f();
+b3mat.translate(66.8,42,-51.2);
+b3mat.rotateY(-45);
+b3mat.rotateX(90);
+bahn3.setModelmatrix(b3mat);
+
+bahn4 = new Box(2.8, 0.5, 3);
+b4mat = new Matrix4f();
+b4mat.translate(67.8,42,-48.9);
+b4mat.rotateY(90);
+b4mat.rotateX(90);
+bahn4.setModelmatrix(b4mat);
+
+bahn5 = new Box(5, 1, 96.6);
+b5mat = new Matrix4f();
+b5mat.translate(66.2,32.6, 0);
+b5mat.rotateX(10);
+bahn5.setModelmatrix(b5mat);
+
+bahn6 = new Box(8, 0.5, 3);
+b6mat = new Matrix4f();
+b6mat.translate(67.8,41.33,-43.85);
+b6mat.rotateX(10);
+b6mat.rotateY(90);
+b6mat.rotateX(90);
+bahn6.setModelmatrix(b6mat);
+
+bahn7 = new Box(5, 1, 5);
+b7mat = new Matrix4f();
+b7mat.translate(66.2,24.2,50);
+bahn7.setModelmatrix(b7mat);
+
+bahn8 = new Box(3.1, 0.5, 3);
+b8mat = new Matrix4f();
+b8mat.translate(67.4,25.2,50.6);
+b8mat.rotateY(45);
+b8mat.rotateX(90);
+bahn8.setModelmatrix(b8mat);
+
+bahn9 = new Box(2.8, 0.5, 3);
+b9mat = new Matrix4f();
+b9mat.translate(65.1,25.2,51.6);
+b9mat.rotateX(90);
+bahn9.setModelmatrix(b9mat);
+
+bahn10 = new Box(5, 1, 60);
+b10mat = new Matrix4f();
+b10mat.translate(34.85,16.45,50);
+b10mat.rotateY(90);
+b10mat.rotateX(-15);
+bahn10.setModelmatrix(b10mat);
+
+bahn11 = new Box(8, 0.5, 3);
+b11mat = new Matrix4f();
+b11mat.translate(60.2,24.2,51.6);
+b11mat.rotateZ(15);
+b11mat.rotateX(90);
+bahn11.setModelmatrix(b11mat);
+
+bahn12 = new Box(12, 1, 5);
+b12mat = new Matrix4f();
+b12mat.translate(0,8.7, 50);
+bahn12.setModelmatrix(b12mat);
+
+bahn13 = new Box(4, 0.5, 5);
+b13mat = new Matrix4f();
+b13mat.translate(-5.75,11, 50);
+b13mat.rotateZ(90);
+bahn13.setModelmatrix(b13mat);
+
+bahn14 = new Box(5, 0.5, 4);
+b14mat = new Matrix4f();
+b14mat.translate(-3,11, 47.75);
+b14mat.rotateX(90);
+bahn14.setModelmatrix(b14mat);
