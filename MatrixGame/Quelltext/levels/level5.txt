@@ -1,0 +1,88 @@
+// Murmel
+murmPosX = 0;
+murmPosY = 0;
+murmPosZ = 0;
+kugel = new Physijs.SphereMesh(
+new THREE.SphereGeometry( 1.5, 32, 32 ),
+	murmel_material
+);
+kugel.castShadow = true;
+kugel.position.set ( murmPosX, murmPosY, murmPosZ );
+scene.add( kugel );
+
+
+
+
+// Ziel
+zielradius = 7;
+ziel = new THREE.Mesh( new THREE.SphereGeometry( zielradius, 64, 64 ), new THREE.MeshLambertMaterial( { side:THREE.BackSide, color: 0x00ff00, opacity: 0.2, transparent: true } ) );
+ziel.position.set ( 0, 60 , -60);
+scene.add( ziel );
+
+zielLight = new THREE.PointLight (0xffff00);
+zielLight.position.set(0, 60, -60);
+zielLight.castShadow = true;
+zielLight.intensity = 0.0;
+
+zielLight.shadow.mapSize.width = 2048;
+zielLight.shadow.mapSize.height = 2048;
+scene.add(zielLight);
+
+
+// Gravitation umkehren
+
+scene.setGravity ( new THREE.Vector3( 0, 80, 0 ) );
+
+
+
+// Wand
+wand = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 5, 5, 5 ),
+	stein_material, 0
+);
+wand.castShadow = true;
+wand.receiveShadow = true;
+wand.position.set ( 0, 20 , -20);
+scene.add( wand );
+
+wand2 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 5, 5, 5 ),
+	stein_material, 0
+);
+wand2.castShadow = true;
+wand2.receiveShadow = true;
+wand2.position.set ( 0, 40 , -40);
+scene.add( wand2 );
+
+
+// extra Licht
+
+spotLightLevel = new THREE.SpotLight (0xffefdb);
+spotLightLevel.position.set(10,10,-20);
+spotLightLevel.castShadow = true;
+spotLightLevel.intensity = 0.4;
+spotLightLevel.angle = 1.7;
+spotLightLevel.target = wand;
+scene.add(spotLightLevel);
+
+spotLightLevel2 = new THREE.SpotLight (0xffefdb);
+spotLightLevel2.position.set(10,30,-40);
+spotLightLevel2.castShadow = true;
+spotLightLevel2.intensity = 0.4;
+spotLightLevel2.angle = 1.7;
+spotLightLevel2.target = wand2;
+scene.add(spotLightLevel2);
+
+spotLightLevel3 = new THREE.SpotLight (0xffefdb);
+spotLightLevel3.position.set(10,50,-60);
+spotLightLevel3.castShadow = true;
+spotLightLevel3.intensity = 0.4;
+spotLightLevel3.angle = 1.7;
+spotLightLevel3.target = ziel;
+scene.add(spotLightLevel3);
+
+
+//freie Kameraposition anpassen
+
+//camera.position.set( 120, 80, 0 );
+

@@ -1,0 +1,380 @@
+// Murmel
+murmPosX = 0;
+murmPosY = 85;
+murmPosZ = 90;
+kugel = new Physijs.SphereMesh(
+new THREE.SphereGeometry( 1.5, 32, 32 ),
+	murmel_material
+);
+kugel.castShadow = true;
+kugel.position.set ( murmPosX, murmPosY, murmPosZ );
+scene.add( kugel );
+
+
+
+
+// Ziel
+zielradius = 7;
+ziel = new THREE.Mesh( new THREE.SphereGeometry( zielradius, 64, 64 ), new THREE.MeshLambertMaterial( { side:THREE.BackSide, color: 0x00ff00, opacity: 0.2, transparent: true } ) );
+ziel.position.set ( 0, 20 , -90);
+scene.add( ziel );
+
+zielLight = new THREE.PointLight (0xffff00);
+zielLight.position.set(0, 20, -90);
+zielLight.castShadow = true;
+zielLight.intensity = 0.0;
+
+zielLight.shadow.mapSize.width = 2048;
+zielLight.shadow.mapSize.height = 2048;
+scene.add(zielLight);
+
+
+
+
+// Wand
+wand = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 200, 56 , 5 ),
+	holz_material, 0
+);
+wand.castShadow = true;
+wand.receiveShadow = true;
+wand.position.set ( 0, 28 , 25);
+scene.add( wand );
+
+wand2 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand2.castShadow = true;
+wand2.receiveShadow = true;
+wand2.position.set ( 0, 80 , 75);
+scene.add( wand2 );
+
+wand3 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand3.castShadow = true;
+wand3.receiveShadow = true;
+wand3.position.set ( 75, 40 , 75);
+scene.add( wand3 );
+
+wand4 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand4.castShadow = true;
+wand4.receiveShadow = true;
+wand4.position.set ( -75, 40 , 75);
+scene.add( wand4 );
+
+wand5 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand5.castShadow = true;
+wand5.receiveShadow = true;
+wand5.position.set ( 50, 20 , 75);
+scene.add( wand5 );
+
+wand6 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand6.castShadow = true;
+wand6.receiveShadow = true;
+wand6.position.set ( 25, 60 , 75);
+scene.add( wand6 );
+
+wand8 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand8.castShadow = true;
+wand8.receiveShadow = true;
+wand8.position.set ( -25, 60 , 75);
+scene.add( wand8 );
+
+wand9 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand9.castShadow = true;
+wand9.receiveShadow = true;
+wand9.position.set ( -50, 20 , 75);
+scene.add( wand9 );
+
+wand10 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand10.castShadow = true;
+wand10.receiveShadow = true;
+wand10.position.set ( 0, 40 , 75);
+scene.add( wand10 );
+
+wand11 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand11.castShadow = true;
+wand11.receiveShadow = true;
+wand11.position.set ( 0, 60 , 50);
+scene.add( wand11 );
+
+wand12 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand12.castShadow = true;
+wand12.receiveShadow = true;
+wand12.position.set ( 75, 60 , 50);
+scene.add( wand12 );
+
+wand13 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand13.castShadow = true;
+wand13.receiveShadow = true;
+wand13.position.set ( -75, 60 , 50);
+scene.add( wand13 );
+
+wand14 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand14.castShadow = true;
+wand14.receiveShadow = true;
+wand14.position.set ( 50, 40 , 50);
+scene.add( wand14 );
+
+wand15 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand15.castShadow = true;
+wand15.receiveShadow = true;
+wand15.position.set ( 25, 20 , 50);
+scene.add( wand15 );
+
+wand16 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand16.castShadow = true;
+wand16.receiveShadow = true;
+wand16.position.set ( -25, 20 , 50);
+scene.add( wand16 );
+
+wand17 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand17.castShadow = true;
+wand17.receiveShadow = true;
+wand17.position.set ( -50, 40 , 50);
+scene.add( wand17 );
+
+wand18 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 10, 10, 10 ),
+	stein_material, 0
+);
+wand18.castShadow = true;
+wand18.receiveShadow = true;
+wand18.position.set ( 0, 20 , 50);
+scene.add( wand18 );
+
+wand19 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 20, 8 , 5 ),
+	holz_material, 0
+);
+wand19.castShadow = true;
+wand19.receiveShadow = true;
+wand19.position.set ( 90 , 60 , 25);
+scene.add( wand19 );
+
+wand20 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 20, 8 , 5 ),
+	holz_material, 0
+);
+wand20.castShadow = true;
+wand20.receiveShadow = true;
+wand20.position.set ( -90 , 60 , 25);
+scene.add( wand20 );
+
+wand21 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 65, 8 , 5 ),
+	holz_material, 0
+);
+wand21.castShadow = true;
+wand21.receiveShadow = true;
+wand21.position.set ( 37.5 , 60 , 25);
+scene.add( wand21 );
+
+wand22 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 65, 8 , 5 ),
+	holz_material, 0
+);
+wand22.castShadow = true;
+wand22.receiveShadow = true;
+wand22.position.set ( -37.5 , 60 , 25);
+scene.add( wand22 );
+
+wand23 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 200, 18 , 5 ),
+	holz_material, 0
+);
+wand23.castShadow = true;
+wand23.receiveShadow = true;
+wand23.position.set ( 0, 73 , 25);
+scene.add( wand23 );
+
+wand24 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 200 , 1 , 48.3 ),
+	holz_material, 0
+);
+wand24.castShadow = true;
+wand24.receiveShadow = true;
+wand24.position.set ( 0, 47.25, 0);
+wand24.rotation.x = -0.35;
+scene.add( wand24 );
+
+wand25 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 200, 39.6 , 2 ),
+	holz_material, 0
+);
+wand25.castShadow = true;
+wand25.receiveShadow = true;
+wand25.position.set ( 0, 19.6 , -21.85);
+scene.add( wand25 );
+
+wand26 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 1 , 5 , 15 ),
+	holz_material, 0
+);
+wand26.castShadow = true;
+wand26.receiveShadow = true;
+wand26.position.set ( 4.95 , 53.5 , 10);
+wand26.rotation.x = -0.35;
+wand26.rotation.y = -0.785;
+scene.add( wand26 );
+
+wand27 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 1 , 5 , 15 ),
+	holz_material, 0
+);
+wand27.castShadow = true;
+wand27.receiveShadow = true;
+wand27.position.set ( -4.95 , 53.5 , 10);
+wand27.rotation.x = -0.35;
+wand27.rotation.y =  0.785;
+scene.add( wand27 );
+
+wand28 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 1 , 5 , 15 ),
+	holz_material, 0
+);
+wand28.castShadow = true;
+wand28.receiveShadow = true;
+wand28.position.set ( -75 , 53.5 , 10);
+wand28.rotation.x = -0.35;
+wand28.rotation.y = -0.785;
+scene.add( wand28 );
+
+wand29 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 1 , 5 , 15 ),
+	holz_material, 0
+);
+wand29.castShadow = true;
+wand29.receiveShadow = true;
+wand29.position.set ( 75 , 53.5 , 10);
+wand29.rotation.x = -0.35;
+wand29.rotation.y = 0.785;
+scene.add( wand29 );
+
+wand30 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 1 , 5 , 25 ),
+	holz_material, 0
+);
+wand30.castShadow = true;
+wand30.receiveShadow = true;
+wand30.position.set ( 48 , 46 , -9);
+wand30.rotation.x = -0.35;
+wand30.rotation.y = -0.785;
+scene.add( wand30 );
+
+wand31 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 1 , 5 , 25 ),
+	holz_material, 0
+);
+wand31.castShadow = true;
+wand31.receiveShadow = true;
+wand31.position.set ( 31 , 46 , -9);
+wand31.rotation.x = -0.35;
+wand31.rotation.y =  0.785;
+scene.add( wand31 );
+
+wand32 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 1 , 5 , 25 ),
+	holz_material, 0
+);
+wand32.castShadow = true;
+wand32.receiveShadow = true;
+wand32.position.set ( -31 , 46 , -9);
+wand32.rotation.x = -0.35;
+wand32.rotation.y = -0.785;
+scene.add( wand32 );
+
+wand33 = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 1 , 5 , 25 ),
+	holz_material, 0
+);
+wand33.castShadow = true;
+wand33.receiveShadow = true;
+wand33.position.set ( -48 , 46 , -9);
+wand33.rotation.x = -0.35;
+wand33.rotation.y =  0.785;
+scene.add( wand33 );
+
+
+// extra Licht
+
+spotLightLevel = new THREE.SpotLight (0xffefdb);
+spotLightLevel.position.set(-50,120,150);
+spotLightLevel.castShadow = true;
+spotLightLevel.intensity = 0.5;
+spotLightLevel.angle = 1.05;
+spotLightLevel.rotation.x = 0.78
+scene.add(spotLightLevel);
+
+spotLightLevel1 = new THREE.SpotLight (0xffefdb);
+spotLightLevel1.position.set(50,120,150);
+spotLightLevel1.castShadow = true;
+spotLightLevel1.intensity = 0.5;
+spotLightLevel1.angle = 1.05;
+spotLightLevel1.rotation.x = 0.78
+scene.add(spotLightLevel1);
+
+spotLightLevel3 = new THREE.SpotLight (0xffefdb);
+spotLightLevel3.position.set(-50,120,-150);
+spotLightLevel3.castShadow = true;
+spotLightLevel3.intensity = 0.3;
+spotLightLevel3.angle = 1.05;
+spotLightLevel3.rotation.x = -0.78
+scene.add(spotLightLevel3);
+
+spotLightLevel4 = new THREE.SpotLight (0xffefdb);
+spotLightLevel4.position.set(50,120,-150);
+spotLightLevel4.castShadow = true;
+spotLightLevel4.intensity = 0.3;
+spotLightLevel4.angle = 1.05;
+spotLightLevel4.rotation.x = -0.78
+scene.add(spotLightLevel4);
+
+
+
+//freie Kameraposition anpassen
+
+camera.position.set( 150, 150, 0 );
+

@@ -1,0 +1,33 @@
+m1 = new Matrix4f();
+m1.translate(0, 21.5, -5);
+m1.rotateX(330);
+box1 = new Box(5, 1, 20);
+box1.setModelmatrix(m1);
+
+m2 = new Matrix4f();
+m2.translate(0 , 17.1, -18.2);
+m2.rotateX(6);
+box2 = new Box(5, 1, 10);
+box2.setModelmatrix(m2);
+
+m3 = new Matrix4f();
+m3.translate(0, 13.5, -40);
+box3 = new Box(5, 1, 20);
+box3.setModelmatrix(m3);
+
+m4 = new Matrix4f();
+m4.translate(0, 6.96, -57.6);
+m4.rotateX(140);
+box4 = new Box(5, 1, 20.7);
+box4.setModelmatrix(m4);
+
+m5 = new Matrix4f();
+m5.translate(0, 0.4, -70.2);
+box5 = new Box(5, 1, 10);
+box5.setModelmatrix(m5);
+
+m6 = new Matrix4f();
+m6.translate(0, 2.5, -75.7);
+m6.rotateX(60);
+box6 = new Box(5, 1, 5);
+box6.setModelmatrix(m6);

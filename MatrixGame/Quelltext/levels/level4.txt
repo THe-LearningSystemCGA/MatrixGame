@@ -1,0 +1,77 @@
+// Murmel
+murmPosX = 0;
+murmPosY = 75;
+murmPosZ = -50;
+kugel = new Physijs.SphereMesh(
+new THREE.SphereGeometry( 1.5, 32, 32 ),
+	murmel_material
+);
+kugel.castShadow = true;
+kugel.position.set ( murmPosX, murmPosY, murmPosZ );
+scene.add( kugel );
+
+
+
+
+// Ziel
+zielradius = 7;
+ziel = new THREE.Mesh( new THREE.SphereGeometry( zielradius, 64, 64 ), new THREE.MeshLambertMaterial( { side:THREE.BackSide, color: 0x00ff00, opacity: 0.2, transparent: true } ) );
+ziel.position.set ( 0, 10 , 50);
+scene.add( ziel );
+
+zielLight = new THREE.PointLight (0xffff00);
+zielLight.position.set(0, 10, 0);
+zielLight.castShadow = true;
+zielLight.intensity = 0.0;
+
+zielLight.shadow.mapSize.width = 2048;
+zielLight.shadow.mapSize.height = 2048;
+scene.add(zielLight);
+
+
+
+
+// Wand
+wand = new Physijs.BoxMesh(
+new THREE.BoxGeometry( 100, 75, 5 ),
+	stein_material, 0
+);
+wand.castShadow = true;
+wand.receiveShadow = true;
+wand.position.set ( 0, 37.5 , 0);
+scene.add( wand );
+
+// extra Licht
+
+spotLightLevel = new THREE.SpotLight (0xffefdb);
+spotLightLevel.position.set(100,150,100);
+spotLightLevel.castShadow = true;
+spotLightLevel.intensity = 0.4;
+spotLightLevel.angle = 0.5;
+scene.add(spotLightLevel);
+
+spotLightLevel2 = new THREE.SpotLight (0xffefdb);
+spotLightLevel2.position.set(100,150,-100);
+spotLightLevel2.castShadow = true;
+spotLightLevel2.intensity = 0.4;
+spotLightLevel2.angle = 0.5;
+scene.add(spotLightLevel2);
+
+spotLightLevel3 = new THREE.SpotLight (0xffefdb);
+spotLightLevel3.position.set(-100,150,100);
+spotLightLevel3.castShadow = true;
+spotLightLevel3.intensity = 0.4;
+spotLightLevel3.angle = 0.5;
+scene.add(spotLightLevel3);
+
+spotLightLevel4 = new THREE.SpotLight (0xffefdb);
+spotLightLevel4.position.set(-100,150,-100);
+spotLightLevel4.castShadow = true;
+spotLightLevel4.intensity = 0.4;
+spotLightLevel4.angle = 0.5;
+scene.add(spotLightLevel4);
+
+//freie Kameraposition anpassen
+
+camera.position.set( 120, 80, 0 );
+

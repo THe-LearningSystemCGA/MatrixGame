@@ -1,0 +1,38 @@
+// Murmel
+murmPosX = 0;
+murmPosY = 50;
+murmPosZ = 0;
+kugel = new Physijs.SphereMesh(
+new THREE.SphereGeometry( 1.5, 32, 32 ),
+	murmel_material
+);
+kugel.castShadow = true;
+kugel.position.set ( murmPosX, murmPosY, murmPosZ );
+scene.add( kugel );
+
+// Ziel
+zielradius = 7;
+ziel = new THREE.Mesh( new THREE.SphereGeometry( zielradius, 64, 64 ), new THREE.MeshLambertMaterial( { side:THREE.BackSide, color: 0x00ff00, opacity: 0.2, transparent: true } ) );
+ziel.position.set ( -70, 5 , 70);
+scene.add( ziel );
+
+zielLight = new THREE.PointLight (0xffff00);
+zielLight.position.set(-70 , 8, 70);
+zielLight.castShadow = true;
+zielLight.intensity = 0.0;
+
+zielLight.shadow.mapSize.width = 2048;
+zielLight.shadow.mapSize.height = 2048;
+scene.add(zielLight);
+
+// extra Licht
+
+spotLightLevel = new THREE.SpotLight (0xffefdb);
+spotLightLevel.position.set(-45,100,45);
+spotLightLevel.castShadow = true;
+spotLightLevel.intensity = 0.8;
+scene.add(spotLightLevel);
+
+//freie Kameraposition anpassen
+
+camera.position.set( 0, 40, 75 );
